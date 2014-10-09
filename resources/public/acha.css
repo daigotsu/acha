@@ -54,7 +54,7 @@ a.logo > h2 { color: #7E5DA3; }
 .repo__status_error { background-color: #D56714; }
 
 .add_repo > input, .add_repo > button { outline: none; }
-.add_repo > input  { font-size: 16px; border: 3px solid #A9A9A9; border-radius: 3px; padding: 8px 6px; width: 300px; }
+.add_repo > input  { display: none; font-size: 16px; border: 3px solid #A9A9A9; border-radius: 3px; padding: 8px 6px; width: 300px; }
 .add_repo > input:focus { border-color: #7E5DA3; }
 .add_repo > button { border: none; width: 60px; height: 26px; background:url(i/add.png); background-size: 100% 200%; position: relative; top: 4px; margin: 0 0 0 8px; cursor: pointer; }
 .add_repo > button:hover { background-position-y: 26px; }

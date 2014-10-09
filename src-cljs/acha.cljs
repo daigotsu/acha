@@ -69,7 +69,7 @@
 
 (def ^:private history (Html5History.))
 
-(def ^:dynamic *title-suffix* "Acha-acha")
+(def ^:dynamic *title-suffix* "E3S Achi")
 
 (defn set-title! [title]
   (set! (.-title js/document) (if title (str title " — " *title-suffix*) *title-suffix*)))
@@ -85,20 +85,16 @@
     [:.header
       (conj
         (if index?
-          [:div.logo {:title "Acha-acha"}]
-          [:a.logo   {:title "Acha-acha"
+          [:div.logo {:title "E3S Achi"}]
+          [:a.logo   {:title "E3S Achi"
                       :href  "#" }])
-        [:h2 "Enterprise Git Achievement solution" [:br] "Web scale. In the cloud"])]))
+        [:h2 "Enterprise Git Achievement solution" [:br] "Web scale. In the cloud. E3S"])]))
 
 (r/defc footer []
   (s/html
     [:.footer
       [:.footer__copy   "© Copyright 2014 " [:a {:href "http://github.com/someteam"} "Some Team"]]
-      [:a.footer__author {:href "https://github.com/tonsky"}      [:img {:src "aches/go@6x.png"}] "Nikita Prokopov"]
-      [:a.footer__author {:href "https://github.com/avasenin"}    [:img {:src "aches/mark-of-the-beast@6x.png"}] "Andrey Vasenin"]
-      [:a.footer__author {:href "https://github.com/parsifal-47"} [:img {:src "aches/owl@6x.png"}] "Renat Idrisov"]
-      [:a.footer__author {:href "https://github.com/ethercrow"}   [:img {:src "aches/swift@6x.png"}] "Dmitry Ivanov"]
-      [:a.footer__author {:href "https://vk.com/id59378819"}      [:img {:src "aches/wow@6x.png"}] "Julie Prokopova"]
+
       (let [meta (d/entity @conn 0)]
         [:.footer__version "App version " (:meta/app-version meta) ", db version " (:meta/db-version meta)])]))
 
