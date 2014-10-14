@@ -69,7 +69,7 @@
 
 (def ^:private history (Html5History.))
 
-(def ^:dynamic *title-suffix* "E3S Achi")
+(def ^:dynamic *title-suffix* "E3S Acha")
 
 (defn set-title! [title]
   (set! (.-title js/document) (if title (str title " — " *title-suffix*) *title-suffix*)))
@@ -85,10 +85,10 @@
     [:.header
       (conj
         (if index?
-          [:div.logo {:title "E3S Achi"}]
-          [:a.logo   {:title "E3S Achi"
+          [:div.logo {:title "E3S Acha"}]
+          [:a.logo   {:title "E3S Acha"
                       :href  "#" }])
-        [:h2 "Enterprise Git Achievement solution" [:br] "Web scale. In the cloud. E3S"])]))
+        [:h2 "Enterprise Git Achievement solution" [:br] "Web scale. In the cloud. E3S."])]))
 
 (r/defc footer []
   (s/html
